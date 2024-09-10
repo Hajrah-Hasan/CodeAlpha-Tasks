@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md p-8 bg-gray-800 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold mb-4">Music Player</h1>
+
+        <!-- Audio Information -->
+        <div id="music-info" class="mb-4">
+            <p id="song-title" class="text-lg font-semibold">Song Title</p>
+            <p id="artist-name" class="text-sm text-gray-400">Artist Name</p>
+        </div>
+
+        <!-- Audio Player Controls -->
+        <div class="flex items-center justify-between">
+            <button id="play-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Play
+            </button>
+            <button id="pause-btn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                Pause
+            </button>
+        </div>
+
+        <!-- Audio Element<iframe  id="audio-player"  src="https://audiomack.com/embed/el3ayel/song/where-you-are-halal-beats" scrolling="no" width="100%" height="252" frameborder="0" title="Where You Are (Halal Beats)"></iframe> -->
+        <audio id="audio-player"  src="https://www.shazam.com/track/555470524/where-you-are-vocals-only" class="hidden"></audio>
+    </div>
+
+    <!-- JavaScript -->
+    <script >document.addEventListener('DOMContentLoaded', () => {
+        const playBtn = document.getElementById('play-btn');
+        const pauseBtn = document.getElementById('pause-btn');
+        const audioPlayer = document.getElementById('audio-player');
+        const songTitle = document.getElementById('song-title');
+        const artistName = document.getElementById('artist-name');
+    
+        // Set song and artist info
+        songTitle.textContent = 'My Favorite Song';
+        artistName.textContent = 'My Favorite Artist';
+    
+        // Play button event
+        playBtn.addEventListener('click', () => {
+            audioPlayer.play();
+        });
+    
+        // Pause button event
+        pauseBtn.addEventListener('click', () => {
+            audioPlayer.pause();
+        });
+    });
+    </script>
+
+</body>
+</html>
