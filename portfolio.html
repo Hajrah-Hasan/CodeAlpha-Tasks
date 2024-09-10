@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9884a11afa.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+
+        box-sizing: border-box;
+        /* overflow-x: hidden; */
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .box1:hover .fa-html5 {
+        transform: scale(1.1);
+        /* Adjust this value to change the translation amount */
+        color: rgb(255, 94, 0);
+    }
+
+    .box2:hover .fa-css3-alt {
+        transform: scale(1.1);
+        /* Adjust this value to change the translation amount */
+        color: rgba(0, 0, 255, 0.825);
+    }
+
+    .box3:hover .fa-js {
+        transform: scale(1.1);
+        /* Adjust this value to change the translation amount */
+        color: yellow;
+    }
+
+    .box4:hover .fa-bootstrap {
+        transform: scale(1.1);
+        /* Adjust this value to change the translation amount */
+        color: rgb(36, 0, 128);
+    }
+
+    .box5:hover .fa-php {
+        transform: scale(1.1);
+        /* Adjust this value to change the translation amount */
+        color: rgb(99, 99, 200);
+    }
+
+    .box6:hover .fa-laravel {
+        transform: scale(1.1);
+        /* Adjust this value to change the translation amount */
+        color: orangered;
+    }
+
+    .fade-in {
+        transform: translateY(20px);
+        opacity: 0;
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<body>
+    <div class="bg-gradient-to-tl  from-[#24033b] to-black  ">
+        <nav class="p-5 md:py-16  text-white">
+            <div class="container  mx-auto flex justify-between items-center ">
+                <a href="mailto:hajrahassan961@gmail.com"
+                    class=" md:text-2xl sm:text-xl  font-semibold">hajrahassan961@gmail.com</a>
+                <div class="hidden md:flex space-x-6 text-xl">
+                    <a href="#home" class="hover:text-gray-400  font-bold ">Home</a>
+                    <a href="#about" class="hover:text-gray-400  font-bold">About</a>
+                    <a href="#services" class="hover:text-gray-400  font-bold">Services</a>
+                    <a href="#contact" class="hover:text-gray-400  font-bold">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobile-menu" class="hidden py-8 md:hidden bg-gradient-to-r from-purple-500 to-black">
+            <a href="#home"
+                class="block px-4 py-2 hover:bg-gray-700 text-white  text-4xl font-semibold fade-in">Home</a>
+            <a href="#about"
+                class="block px-4 py-2 hover:bg-gray-700  text-white  text-4xl font-semibold fade-in">About</a>
+            <a href="#services"
+                class="block px-4 py-2 hover:bg-gray-700  text-white  text-4xl font-semibold fade-in">Services</a>
+            <a href="#contact"
+                class="block px-4 py-2 hover:bg-gray-700  text-white  text-4xl font-semibold fade-in">Contact</a>
+        </div>
+
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+
+        <div class="left pl-3 pt-9 md  lg:ps-20 xl:ps-24 mx-0">
+            <p class="text-gray-300 text-2xl md:pl-3 lg:pl-0 font-bold  lg:text-4xl xl:text-5xl md:pb-4 fade-in">I am
+                Hajra</p>
+            <h1 class="text-[#8750f7]  md:pl-3 lg:pl-0 text-4xl font-bold  lg:text-6xl md:pb-4 md:text-wrap fade-in ">
+                Web Developer
+
+            </h1>
+
+            <div class="flex flex-col md:flex-row-reverse">
+                <div
+                    class="flex md:flex  md:overflow-visible  md:flex-row md:relative  lg:bottom-52 md:bottom-32  md:right-[7%] md:justify-center align-middle  justify-center  py-8 rotate-[4deg] hover:rotate-0 ">
+                    <img class="pic  sm:w-[50%] w-[230px] md:w-[560px] md:border-2 lg:w-[800px] xl:w-[1200px]
+            h-[x]:border  border hover:border-[#8750f7] hover:border-2 border-[#251348]   rounded-[30px] fade-in "
+                        src="P.jpg" alt="">
+                </div>
+                <div class="md:relative md:top-1  md:text-center ">
+                    <p
+                        class="text-gray-300  lg:pl-0 md:pl-4 md:pb-4 md:pr-[12%] text-xl text-left xl:text-3xl ps-2 md: text-balance xl:w-[70%] fade-in">
+                        I break down complex user
+                        experinece problems to
+                        create integritiy focussed solutions that connect billions of people</p>
+                    <div class="py-7 mb-0 sm:flex md:flex-col lg:flex-row text-gray-300 ">
+                        <a href="#">
+                            <button
+                                class=" outline py-4 lg:me-[68%]  md:me-[60%] rounded-[30px] px-6 lg:px-16 lg:text-2xl outline-1 hover:bg-[#8750f7] hover:text-green-100 outline-[#8750f7] text-[#8750f7] fade-in">Download
+                                CV
+                            </button></a>
+                        <ul class="flex py-7 lg:text-3xl text-[#8750f7] text-xl list-none    ">
+                            <li class="ps-4 pe-4"><a href=""><i
+                                        class="fa-brands fa-twitter hover:text-gray-100 fade-in"></i></a></li>
+                            <li class="px-4"><a href=""><i
+                                        class="fa-brands fa-linkedin hover:text-gray-100 fade-in"></i></a></li>
+                            <li class="px-4"><a href=""><i
+                                        class="fa-brands fa-github hover:text-gray-100 fade-in"></i></a></li>
+                            <li class="px-4"><a href=""><i
+                                        class="fa-brands fa-instagram hover:text-gray-100 fade-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black mx-0">
+        <h1
+            class="text-center text-4xl md:text-5xl  font-bold text-purple-400 pb-4  md:pb-8 md:pt-20 lg:text-6xl sm:pt-16 pt-16 fade-in ">
+            My Recent Works</h1>
+        <p class="text-center px-5 text-xl  md:text-2xl  text-gray-300  pb-10  md:pb-10 lg:px-[20%] fade-in ">We put
+            your ideas
+            and thus your
+            wishes in the form of a unique web project that inspires you and you customers.</p>
+
+    </div>
+    <div class="flex lg:pt-8 flex-col bg-black  md:flex-row mx-0 ">
+        <img class="m-auto py-4  sm:h-96 md:h-72  lg:h-96   h-80 fade-in " src="pic1.webp" alt="">
+        <img class="m-auto py-4  sm:h-96  md:h-72  lg:h-96  h-80 fade-in" src="pic2.webp" alt="">
+    </div>
+    <div class="flex lg:pb-24 bg-black flex-col md:flex-row">
+        <img class="m-auto py-4 h-80 sm:h-96 md:h-72  lg:h-96 fade-in" src="pic3.webp" alt="">
+        <img class="m-auto py-4  h-80 sm:h-96 md:h-72  lg:h-96  fade-in" src="pic4.webp  " alt="">
+    </div>
+
+
+    <!-- <div class=" bg-black">
+
+        </div> -->
+    <section id="about">
+        <div class="flex flex-col  md:flex-row text-gray-200 bg-[#0f0715]">
+            <div class="flex flex-col md:w-1/2 px-5 py-5 fade-in mx-0">
+                <h1
+                    class="md:text-left  text-purple-400 font-bold pb-8 pt-14 text-4xl lg:text-5xl lg:pt-16 lg:pb-10 md:text-4xl md:pt-12 md:pb-8 sm:text-4xl sm:pt-16 sm:pb-10 ">
+                    <span>@</span> My Experience
+                </h1>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2024 - Present</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">Front-end Developer</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">YoungDev Intern,Remote</p>
+                </div>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2024 - Present</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">Front-end Developer</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">CodeAlpha, Remote</p>
+                </div>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2024 </p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">Full Stack Web Developer</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">ProgidyInfoTech, Remote</p>
+                </div>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2024</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">Full-Stack Developer </h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">Cybex,Fsd</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:w-1/2 px-5 pt-5 lg:pb-20">
+                <h1
+                    class=" md:text-left pb-8 pt-14 text-4xl lg:text-5xl lg:pt-16 lg:pb-10 md:text-4xl md:pt-12 md:pb-8 sm:text-4xl sm:pt-16 sm:pb-10   text-purple-400 font-bold fade-in">
+                    <span>@</span> My Education
+                </h1>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2020 - 2024</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">BS-IT</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">GCWUF,Fsd</p>
+                </div>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2023 - 2024</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">Full-Stack Developer</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">Cybex, Fsd</p>
+                </div>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2022</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2">Python workshop</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">STEPUP IT SOLUTIONS, Fsd</p>
+                </div>
+                <div
+                    class="box h-28 lg:h-40 md:h-36  py-4 my-4 px-3 bg-black text-white rounded-3xl hover:bg-gradient-to-br from-[#7041cf] to-[#351b66] fade-in">
+                    <p class="font-bold text-[#8750f7] text-xl lg:text-2xl">2018 - 2020</p>
+                    <h1 class="font-bold text-lg xl:text-3xl sm:text-2xl lg:py-3 md:py-2 ">ICS-Computer Science</h1>
+                    <p class="text-gray-200 text-lg md:text-xl lg:pb-2">Punjab College, Fsd</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Skills -->
+    </section>
+    <section id="services">
+        <h1
+            class="text-center text-4xl font-bold pt-14 pb-5 bg-black text-purple-400 sm:text-4xl md:text-5xl lg:text-6xl lg:pt-[8%]  md:pt-20  mx-0">
+            <span class="fade-in"> My Skills</span>
+        </h1>
+        <p
+            class="text-center  text-gray-200 text-xl bg-black sm:px-4 px-2 sm:text-pretty sm:text-2xl lg:px-20 lg:pb-5 md:pb-4 ">
+            <span class="fade-in"> We put your ideas and thus your wishes in the form of a
+                unique web project that inspires you and you customers./span>
+        </p>
+        <div class="flex flex-col sm:flex-row">
+            <div class="box"></div>
+        </div>
+
+
+
+        <div
+            class="grid grid-cols-1 lg:pb-20 xl:px-24 lg:px-[10%] md:px-[5%] sm:px-[15%] lg:overflow-x-hidden sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 pt-12   pb-5 bg-black">
+            <div
+                class="box1  text-center  mb-12 sm:mb-14 md:mb-12 sm:h-52 sm:w-52  h-36 m-auto w-40 bg-[#140c1c]  hover:bg-[#2a1454] border-[#140c1c] hover:border-[#8750f7]    hover:border rounded-[18%] fade-in">
+                <i
+                    class="fa-brands fa-html5 text-[#c7c1ae]    text-6xl sm:text-7xl sm:pt-10 md:pt-10 lg:pt-10 xl:pt-10 sm:pb-4 md:pb-4 lg:pb-4 xl:pb-6 pt-8  pb-2 transition-transform duration-300 ease-in-out "></i>
+                <p class="text-center text-xl  text-[#747779] font-bold sm:text-2xl lg:text-3xl">92%</p>
+                <div class="text-center text-lg mt-7 sm:mt-16 md:mt-14 font-bold text-[#8750f7]">Html</div>
+            </div>
+            <div
+                class="box2  text-center mb-12 sm:mb-14 md:mb-12 sm:h-52 sm:w-52   h-36 m-auto w-40 bg-[#140c1c]  hover:bg-[#2a1454] border-[#140c1c] hover:border-[#8750f7]    hover:border rounded-[18%] fade-in">
+                <i
+                    class="fa-brands fa-css3-alt text-[#c7c1ae]    text-6xl sm:text-7xl sm:pt-10 md:pt-10 lg:pt-10 xl:pt-10 sm:pb-4 md:pb-4 lg:pb-4 xl:pb-6 pt-8  pb-2 transition-transform duration-300 ease-in-out "></i>
+                <p class="text-center text-xl  text-[#747779] font-bold sm:text-2xl lg:text-3xl">92%</p>
+                <div class="text-center text-lg mt-7 sm:mt-16 md:mt-14 font-bold text-[#8750f7]">Css</div>
+            </div>
+            <div
+                class="box3  text-center  mb-12 sm:mb-14 md:mb-12 sm:h-52 sm:w-52  h-36 m-auto w-40 bg-[#140c1c]  hover:bg-[#2a1454] border-[#140c1c] hover:border-[#8750f7]    hover:border rounded-[18%] fade-in">
+                <i
+                    class="fa-brands fa-js text-[#c7c1ae]    text-6xl sm:text-7xl sm:pt-10 md:pt-10 lg:pt-10 xl:pt-10 sm:pb-4 md:pb-4 lg:pb-4 xl:pb-6 pt-8  pb-2 transition-transform duration-300 ease-in-out "></i>
+                <p class="text-center text-xl  text-[#747779] font-bold sm:text-2xl lg:text-3xl">82%</p>
+                <div class="text-center text-lg mt-7 sm:mt-16 md:mt-14 font-bold text-[#8750f7]">Javacript</div>
+            </div>
+            <div
+                class="box4  text-center  mb-12 sm:mb-14 md:mb-12 sm:h-52 sm:w-52  h-36 m-auto w-40 bg-[#140c1c]  hover:bg-[#2a1454] border-[#140c1c] hover:border-[#8750f7]    hover:border rounded-[18%] fade-in">
+                <i
+                    class="fa-brands fa-bootstrap text-[#c7c1ae]    text-6xl sm:text-7xl sm:pt-10 md:pt-10 lg:pt-10 xl:pt-10 sm:pb-4 md:pb-4 lg:pb-4 xl:pb-6 pt-8  pb-2 transition-transform duration-300 ease-in-out "></i>
+                <p class="text-center text-xl  text-[#747779] font-bold sm:text-2xl lg:text-3xl">92%</p>
+                <div class="text-center text-lg  mt-7 sm:mt-16 md:mt-14 font-bold text-[#8750f7]">Bootstrap</div>
+            </div>
+            <div
+                class="box5  text-center  mb-12 sm:mb-14 md:mb-12  sm:h-52 sm:w-52 h-36 m-auto w-40 bg-[#140c1c]  hover:bg-[#2a1454] border-[#140c1c] hover:border-[#8750f7]    hover:border rounded-[18%] fade-in">
+                <i
+                    class="fa-brands fa-php text-[#c7c1ae]    text-6xl sm:text-7xl sm:pt-10 md:pt-10 lg:pt-10 xl:pt-10 sm:pb-4 md:pb-4 lg:pb-4 xl:pb-6 pt-8  pb-2 transition-transform duration-300 ease-in-out "></i>
+                <p class="text-center text-xl  text-[#747779] font-bold sm:text-2xl lg:text-3xl">70%</p>
+                <div class="text-center text-lg  font-bold mt-7 sm:mt-16 md:mt-14 text-[#8750f7]">Php</div>
+            </div>
+            <div
+                class="box6  xl:-me-[215%] mb-12 sm:h-52 sm:w-52 sm:mb-14 md:mb-12 text-center   h-36 m-auto w-40 bg-[#140c1c]  hover:bg-[#2a1454] border-[#140c1c] hover:border-[#8750f7]    hover:border rounded-[18%] fade-in">
+                <i
+                    class="fa-brands fa-laravel text-[#c7c1ae]    text-6xl sm:text-7xl sm:pt-10 md:pt-10 lg:pt-10 xl:pt-10 sm:pb-4 md:pb-4 lg:pb-4 xl:pb-6 pt-8  pb-2 transition-transform duration-300 ease-in-out "></i>
+                <p class="text-center text-xl  text-[#747779] font-bold sm:text-2xl lg:text-3xl">72%</p>
+                <div class="text-center text-lg mt-7 sm:mt-16 md:mt-14 font-bold text-[#8750f7]">Laravel</div>
+            </div>
+
+        </div>
+    </section>
+    <section id="contact">
+        <div class="bg-[#0f0715] py-20">
+            <div class="box md:pb-8 h-screen rounded-3xl w-[80%] md:w-[50%] lg:w-[50%] m-auto bg-black fade-in ">
+                <h1
+                    class="pl-5 text-[#6238b7] pt-20 font-bold text-5xl lg:text-5xl lg:pe-16 lg:ps-8 text-left  fade-in">
+                    Let’s work
+                    together!</h1>
+
+                <div class="flex pt-10 text-gray-100">
+                    <div
+                        class="flex items-center  bg-[#6238b7] sm:ml-10 md:ml-10 lg:ml-16 ml-5 justify-center w-12 h-12 rounded-full ">
+                        <i class="fas fa-user text-2xl fade-in"></i>
+                    </div>
+                    <div class="pl-4 ">
+                        <p class="text-md sm:text-lg lg:text-2xl md:text-2xl text-gray-100 fade-in ">
+                            <span><i></i></span>Phone
+                        </p>
+                        <p
+                            class=" font-bold text-sm sm:text-2xl text-gray-100 hover:text-[#6238b7] md:text-3xl lg:text-3xl fade-in">
+                            +92
+                            3157129156</p>
+                    </div>
+                </div>
+
+                <div class="flex pt-10">
+                    <div
+                        class="flex items-center  bg-[#6238b7] sm:ml-10 md:ml-10 lg:ml-16 ml-5 justify-center w-12 h-12 rounded-full fade-in  ">
+                        <i class="fas fa-user text-2xl text-gray-100 fade-in "></i>
+                    </div>
+                    <div class="pl-4  ">
+                        <p class="text-lg lg:text-2xl md:text-2xl  text-gray-100 text-md  "><span><i></i></span>Email
+                        </p>
+                        <p
+                            class=" font-bold   text-sm sm:text-2xl hover:text-[#6238b7] md:text-3xl lg:text-3xl text-gray-100 fade-in">
+                            hajrahassan961
+                        @gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="flex pt-10">
+                    <div
+                        class="flex items-center  bg-[#6238b7] sm:ml-10 md:ml-10 lg:ml-16 ml-5 justify-center w-12 h-12 rounded-full text-gray-100  fade-in">
+                        <i class="fas fa-user text-2xl fade-in"></i>
+                    </div>
+                    <div class="pl-4 ">
+                        <p class="text-lg lg:text-2xl md:text-2xl  text-gray-100 fade-in text-md ">
+                            <span><i></i></span>Address
+                        </p>
+                        <p
+                            class=" font-bold text-sm sm:text-2xl hover:text-[#6238b7] md:text-3xl lg:text-3xl text-gray-100 fade-in">
+                            Fsd,Pakistan</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Drag Up Button -->
+    <button id="scrollToTopButton"
+        class="fixed bottom-5 right-5 text-[#8750f7] hover:bg-[#8750f7] outline outline-[#8750f7] hover:text-white rounded-full p-3 shadow-lg hidden">
+        <!-- You can use an icon here for the arrow, such as an SVG or a font icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+    <script>
+        const scrollToTopButton = document.getElementById('scrollToTopButton');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Intersection Observer to add fade-in effect
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.fade-in');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
